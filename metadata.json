@@ -1,0 +1,6 @@
+{
+  "name": "Partfindr",
+  "description": "The Wikipedia of components and devices. Search specs, datasheets, and hardware info.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

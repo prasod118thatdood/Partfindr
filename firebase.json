@@ -1,0 +1,8 @@
+{
+  "firestore": [
+    {
+      "database": "ai-studio-android-partfind-06f798a6-0340-48c8-81ba-408959da4fe0",
+      "rules": "firestore.rules"
+    }
+  ]
+}

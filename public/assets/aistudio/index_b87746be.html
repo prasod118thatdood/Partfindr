@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>partfindr.com | FIND data systems</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="brand-container">
+      <div class="logo">
+        <!-- Placeholder for your custom logo -->
+        <span>[ LOGO ]</span>
+      </div>
+      <div class="site-titles">
+        <span class="brand-name">partfindr.net</span>
+        <span class="company-name">by FIND Data Systems</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Categories</a>
+      <a href="#">Datasheets</a>
+      <a href="#article-form-section" class="nav-btn">Add Article</a>
+    </nav>
+  </header>
+
+  <!-- Hero / Search Section -->
+  <section class="hero">
+    <h1>Find Specs, Datasheets & Hardware Info</h1>
+    <p>Search any laptop, smartphone, IC, or hardware component.</p>
+    
+    <!-- Live Search Input Form -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="e.g., Ryzen 9 9800X3D, Intel i7, Apple M2..." autocomplete="off">
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <main class="container" id="content-container">
+    
+    <!-- Component / Article 1: Ryzen 9 9800X3D -->
+    <article class="component-card" data-search="amd ryzen 9 9800x3d cpu processor desktop gaming">
+      <div class="component-header">
+        <div>
+          <h2>AMD Ryzen 9 9800X3D Processor</h2>
+          <span class="badge">CPU / Desktop Processor</span>
+        </div>
+        <a href="#" class="btn-download" target="_blank">📄 Download Datasheet (PDF)</a>
+      </div>
+      <section class="info-section">
+        <h3>Overview & Function</h3>
+        <p>
+          The AMD Ryzen 9 9800X3D is an elite gaming processor utilizing 2nd Generation AMD 3D V-Cache technology. 
+          It features Zen 5 architecture cores designed to deliver maximum frame rates and efficiency for high-end gaming rigs and workstations.
+        </p>
+      </section>
+      <section class="info-section">
+        <h3>Hardware Specifications</h3>
+        <table class="specs-table">
+          <tr><th>Architecture</th><td>Zen 5 (Granite Ridge)</td></tr>
+          <tr><th>Cores / Threads</th><td>8 Cores / 16 Threads</td></tr>
+          <tr><th>L3 Cache</th><td>96 MB (3D V-Cache)</td></tr>
+          <tr><th>Base / Boost Clock</th><td>4.7 GHz / 5.2 GHz</td></tr>
+          <tr><th>TDP</th><td>120 W</td></tr>
+          <tr><th>Socket Support</th><td>AM5</td></tr>
+        </table>
+      </section>
+    </article>
+
+    <!-- Component / Article 2: Intel Core i7-13700K -->
+    <article class="component-card" data-search="intel core i7-13700k cpu processor raptor lake">
+      <div class="component-header">
+        <div>
+          <h2>Intel Core i7-13700K Processor</h2>
+          <span class="badge">CPU / Integrated Circuit</span>
+        </div>
+        <a href="#" class="btn-download" target="_blank">📄 Download Datasheet (PDF)</a>
+      </div>
+      <section class="info-section">
+        <h3>Overview & Function</h3>
+        <p>
+          The Intel Core i7-13700K is a high-performance desktop processor based on the Raptor Lake architecture, 
+          combining Performance cores and Efficient cores for heavy multi-threaded workloads.
+        </p>
+      </section>
+      <section class="info-section">
+        <h3>Hardware Specifications</h3>
+        <table class="specs-table">
+          <tr><th>Architecture</th><td>Raptor Lake (13th Gen)</td></tr>
+          <tr><th>Total Cores / Threads</th><td>16 Cores (8P + 8E) / 24 Threads</td></tr>
+          <tr><th>Base / Max Clock Speed</th><td>3.40 GHz / 5.40 GHz</td></tr>
+          <tr><th>Base Power (TDP)</th><td>125 W (Max Turbo 253 W)</td></tr>
+          <tr><th>Socket Support</th><td>LGA1700</td></tr>
+        </table>
+      </section>
+    </article>
+
+    <!-- Component / Article 3: Apple M2 Chip -->
+    <article class="component-card" data-search="apple m2 chip soc macbook custom silicon">
+      <div class="component-header">
+        <div>
+          <h2>Apple M2 System-on-Chip (SoC)</h2>
+          <span class="badge">SoC / Custom Silicon</span>
+        </div>
+        <a href="#" class="btn-download" target="_blank">📄 Download Datasheet (PDF)</a>
+      </div>
+      <section class="info-section">
+        <h3>Overview & Function</h3>
+        <p>
+          The Apple M2 chip represents the second generation of Apple’s M-series silicon, offering industry-leading performance-per-watt 
+          for MacBook Air, MacBook Pro, and iPad models.
+        </p>
+      </section>
+      <section class="info-section">
+        <h3>Hardware Specifications</h3>
+        <table class="specs-table">
+          <tr><th>Nodes</th><td>5nm (Second Generation)</td></tr>
+          <tr><th>CPU Cores</th><td>8-core (4 performance, 4 efficiency)</td></tr>
+          <tr><th>GPU Cores</th><td>Up to 10-core GPU</td></tr>
+          <tr><th>Unified Memory</th><td>Up to 24 GB</td></tr>
+        </table>
+      </section>
+    </article>
+
+  </main>
+
+  <!-- No Results Message (Hidden by default) -->
+  <div id="no-results" class="no-results-msg" style="display: none;">
+    <p>No components found matching your search. Try adding a new article below!</p>
+  </div>
+
+  <!-- Add New Article Section -->
+  <section class="form-section-wrapper" id="article-form-section">
+    <div class="form-card">
+      <h2>Publish New Component Article</h2>
+      <p>Add your own technical breakdown or device overview to the live feed.</p>
+      
+      <form id="add-article-form">
+        <div class="form-group">
+          <label for="component-title">Component / Device Name</label>
+          <input type="text" id="component-title" placeholder="e.g., NVIDIA RTX 5090" required>
+        </div>
+
+        <div class="form-group">
+          <label for="component-category">Category Badge</label>
+          <input type="text" id="component-category" placeholder="e.g., GPU / Graphics Card" required>
+        </div>
+
+        <div class="form-group">
+          <label for="component-overview">Overview & Function</label>
+          <textarea id="component-overview" rows="3" placeholder="Describe what it does and its main application..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="component-specs">Key Specifications (Key: Value separated by commas)</label>
+          <input type="text" id="component-specs" placeholder="e.g., Architecture: Blackwell, VRAM: 32GB GDDR7, TDP: 600W" required>
+        </div>
+
+        <div class="form-group">
+          <label for="datasheet-link">Datasheet Link (URL)</label>
+          <input type="url" id="datasheet-link" placeholder="https://example.com/datasheet.pdf">
+        </div>
+
+        <button type="submit" class="btn-submit">Publish Article</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 partfindr.net — A product of <strong>FIND Data Systems</strong>. All rights reserved.</p>
+  </footer>
+
+  <!-- Script for Live Search & Dynamic Additions -->
+  <script>
+    // Live Search Functionality
+    const searchInput = document.getElementById('searchInput');
+    const container = document.getElementById('content-container');
+    const noResultsMsg = document.getElementById('no-results');
+
+    searchInput.addEventListener('input', function(e) {
+      const query = e.target.value.toLowerCase().trim();
+      const articles = container.getElementsByClassName('component-card');
+      let visibleCount = 0;
+
+      Array.from(articles).forEach(article => {
+        // Collect searchable data from the element's custom attribute or text content
+        const searchData = article.getAttribute('data-search') || '';
+        const textContent = article.innerText.toLowerCase();
+
+        if (searchData.includes(query) || textContent.includes(query)) {
+          article.style.display = 'block';
+          visibleCount++;
+        } else {
+          article.style.display = 'none';
+        }
+      });
+
+      // Show or hide "no results" warning text
+      if (visibleCount === 0 && query !== '') {
+        noResultsMsg.style.display = 'block';
+      } else {
+        noResultsMsg.style.display = 'none';
+      }
+    });
+
+    // Dynamic Article Addition
+    document.getElementById('add-article-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const title = document.getElementById('component-title').value;
+      const category = document.getElementById('component-category').value;
+      const overview = document.getElementById('component-overview').value;
+      const specsRaw = document.getElementById('component-specs').value;
+      const datasheet = document.getElementById('datasheet-link').value || '#';
+
+      // Format specs into table rows
+      let specsRowsHTML = '';
+      const specsPairs = specsRaw.split(',');
+      specsPairs.forEach(pair => {
+        const parts = pair.split(':');
+        if(parts.length === 2) {
+          specsRowsHTML += `
+            <tr>
+              <th>${parts[0].trim()}</th>
+              <td>${parts[1].trim()}</td>
+            </tr>
+          `;
+        }
+      });
+
+      if(!specsRowsHTML) {
+        specsRowsHTML = `<tr><th>Details</th><td>${specsRaw}</td></tr>`;
+      }
+
+      // Create new article element with searchable data string set automatically
+      const newArticle = document.createElement('article');
+      newArticle.className = 'component-card';
+      newArticle.setAttribute('data-search', `${title} ${category} ${overview} ${specsRaw}`.toLowerCase());
+      
+      newArticle.innerHTML = `
+        <div class="component-header">
+          <div>
+            <h2>${title}</h2>
+            <span class="badge">${category}</span>
+          </div>
+          <a href="${datasheet}" class="btn-download" target="_blank">📄 Download Datasheet (PDF)</a>
+        </div>
+        <section class="info-section">
+          <h3>Overview & Function</h3>
+          <p>${overview}</p>
+        </section>
+        <section class="info-section">
+          <h3>Hardware Specifications</h3>
+          <table class="specs-table">
+            ${specsRowsHTML}
+          </table>
+        </section>
+      `;
+
+      container.prepend(newArticle);
+      this.reset();
+      searchInput.value = ''; // Reset search filter box
+      
+      // Trigger input event to clear filtering view and scroll back up
+      const event = new Event('input');
+      searchInput.dispatchEvent(event);
+      newArticle.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

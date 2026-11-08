@@ -1,0 +1,27 @@
+{
+  "entities": {
+    "UserArticle": {
+      "title": "UserArticle",
+      "description": "User created hardware component article that syncs to the cloud",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "Owner Google User ID" },
+        "title": { "type": "string", "description": "Component / Device Name" },
+        "categoryBadge": { "type": "string", "description": "Category badge e.g. GPU, CPU" },
+        "overview": { "type": "string", "description": "Overview & function description" },
+        "specsRaw": { "type": "string", "description": "Key specs" },
+        "datasheetUrl": { "type": "string", "description": "Manufacturer datasheet URL" },
+        "isFavorite": { "type": "boolean", "description": "Whether bookmarked/saved" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "title", "categoryBadge", "overview", "specsRaw"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/articles/{articleId}": {
+      "entity": "UserArticle",
+      "description": "Cloud-persisted user hardware articles scoped per user account"
+    }
+  }
+}

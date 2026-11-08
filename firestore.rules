@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidUserArticle(data, userId) {
+      return data.userId == userId &&
+             data.title is string && data.title.size() > 0 && data.title.size() <= 200 &&
+             data.categoryBadge is string && data.categoryBadge.size() > 0 && data.categoryBadge.size() <= 100 &&
+             data.overview is string && data.overview.size() > 0 && data.overview.size() <= 5000 &&
+             data.specsRaw is string && data.specsRaw.size() > 0 && data.specsRaw.size() <= 3000 &&
+             (!('datasheetUrl' in data) || data.datasheetUrl is string) &&
+             (!('isFavorite' in data) || data.isFavorite is bool);
+    }
+
+    match /users/{userId}/articles/{articleId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidUserArticle(request.resource.data, userId);
+      allow update: if isOwner(userId) && isValidUserArticle(request.resource.data, userId);
+      allow delete: if isOwner(userId);
+    }
+  }
+}
